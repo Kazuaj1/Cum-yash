@@ -1,2 +1,2 @@
-# Cum-yash
+# cool-yash
 Lol
