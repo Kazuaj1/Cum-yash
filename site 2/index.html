@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Riyaa Ramen 🎀</title>
+        <link rel="icon" href="src/ar.png" type="image/x-icon">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Press+Start+2P&family=Yatra+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+   
+    <body>
+    
+        <!-- Full-screen overlay for first visit -->
+        
+
+        <div id="overlay">
+            <a href="#" class="buttonClass">Click Here</a>
+        </div>
+    
+        <!-- Main content container -->
+        <div class="container" id="main-content">
+            <img src="src/nigga.png" alt="Profile Picture" class="pfp">
+            <p class="name">R I Y A A  R A M E N</p>
+            <p class="quote">"My name is Riyaa Ramen, a 15-year-old student at Chennai Public School, but let’s skip the boring intro because here’s the real deal: I’m a pasta-obsessed, coffee-fueled chatterbox who can’t stop yapping (seriously, I could talk to a wall). My soul belongs to The Vampire Diaries, and my vibe is all things beige, black, and white—but my personality? Total rainbow chaos. Coffee is basically my lifeline, and if you ever hear me say I’m giving it up, call for help because I’ve been kidnapped. Oh, and did I mention I love series? Because I do. A lot"</p>
+
+            <audio autoplay loop>
+                <source src="src/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- Image buttons for social links -->
+            <div class="social-buttons">
+                </a>
+                <a href="https://www.instagram.com/_riyaa.raman_/" target="_blank">
+                    <img src="src/ig.png" alt="Instagram">
+                </a>
+                <a href="https://snapchat.com/t/xXo0oiGz" target="_blank">
+                    <img src="src/snap.png" alt="Stack Overflow">
+                </a>
+            </div>
+            
+            <div class="cursor"></div>
+
+        </div>
+    
+        <script>
+            // JavaScript to handle the overlay click and hide
+            document.getElementById("overlay").addEventListener("click", function () {
+                this.style.display = "none"; // Hide the overlay
+                document.getElementById("main-content").style.display = "block"; // Show the main content
+            });
+    
+            // Ensure main content is hidden initially
+            document.getElementById("main-content").style.display = "none";
+
+            // Cursor Related
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => { 
+              cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")})
+
+            document.addEventListener('click', () => {
+              cursor.classList.add("expand");
+
+            setTimeout(() => {
+              cursor.classList.remove("expand");
+            }, 500)
+            })
+        </script>
+    
+    </body>
+    
+    
+    </html>
+    
