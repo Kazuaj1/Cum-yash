@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajai Raghav</title>
+        <link rel="icon" href="src/ar.png" type="image/x-icon">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Press+Start+2P&family=Yatra+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+   
+    <body>
+    
+        <!-- Full-screen overlay for first visit -->
+        
+
+        <div id="overlay">
+            <a href="#" class="buttonClass">Click Here</a>
+        </div>
+    
+        <!-- Main content container -->
+        <div class="container" id="main-content">
+            <img src="src/nigga.png" alt="Profile Picture" class="pfp">
+            <p class="name">A J A I R A G H A V</p>
+            <p class="quote">"My name is K. Ajai Raghav, a self-proclaimed gamer, artist, photographer, and storyteller. I thrive on creativity, crafting worlds through my stories, capturing moments through my lens, and diving headfirst into epic gaming adventures. With my goofball spirit leading the way, I embrace life with humor and imagination, always finding new ways to express myself and keep things exciting."</p>
+
+            <audio autoplay loop>
+                <source src="src/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- Image buttons for social links -->
+            <div class="social-buttons">
+                <a href="https://discord.com/invite/" target="_blank">
+                    <img src="src/discord.png" alt="Discord">
+                </a>
+                <a href="https://www.instagram.com/aja1_4aghav/" target="_blank">
+                    <img src="src/ig.png" alt="Instagram">
+                </a>
+                <a href="https://snapchat.com/t/u2UvZqaH" target="_blank">
+                    <img src="src/snap.png" alt="Stack Overflow">
+                </a>
+                <a href="https://github.com/Kazuaj1/" target="_blank">
+                    <img src="src/github.png" alt="GitHub">
+                </a>
+            </div>
+            
+            <div class="cursor"></div>
+
+        </div>
+    
+        <script>
+            // JavaScript to handle the overlay click and hide
+            document.getElementById("overlay").addEventListener("click", function () {
+                this.style.display = "none"; // Hide the overlay
+                document.getElementById("main-content").style.display = "block"; // Show the main content
+            });
+    
+            // Ensure main content is hidden initially
+            document.getElementById("main-content").style.display = "none";
+
+            // Cursor Related
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => { 
+              cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")})
+
+            document.addEventListener('click', () => {
+              cursor.classList.add("expand");
+
+            setTimeout(() => {
+              cursor.classList.remove("expand");
+            }, 500)
+            })
+        </script>
+    
+    </body>
+    
+    
+    </html>
+    
